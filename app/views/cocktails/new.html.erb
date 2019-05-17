@@ -1,7 +1,25 @@
+<div class="container my-4">
+  <h1>Create your new cocktail!</h1>
 <%= simple_form_for [@cocktail] do |f| %>
   <%= f.input :name %>
   <%= f.submit "add a cocktail", class: "btn btn-primary" %>
 <% end %>
-
+<br>
+<br>
+<div class="btn btn-primary cocktail_details">
 <%= link_to('Back to overview', cocktails_path) %>
+</div>
+</div>
 
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>

@@ -1,10 +1,33 @@
-<h1>List of Cocktails</h1>
-<ul>
-<h2><% @cocktails.each do |cocktail| %></h2>
-<h2><li><%= link_to cocktail.name, cocktail_path(cocktail) %></li></h2>
-<% end %>
-</ul>
 
-<%= link_to('Add a cocktail', new_cocktail_path) %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1468072114808-903e572b8ead?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1566&q=80g);">
+    <h1>COCKTAILY brings <strong>greatest cocktails recipies</strong> to <strong>night life people</strong>!</h1>
+    <p>Change your life and learn to make cocktails from the entire world.</p>
+    <div class="btn btn-primary">
+      <%= link_to('Add a cocktail', new_cocktail_path) %>
+    </div>
+  <div>
+  </div>
+</div>
+<div class="container">
+<div class="row">
+  <h2><% @cocktails.each do |cocktail| %></h2>
+    <div class="col-md-2">
+      <h2><div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1542600176-9d2c4bb4bc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1601&q=80")><%= link_to cocktail.name, cocktail_path(cocktail) %></div></h2>
+      </div>
+      <% end %>
+</div>
+</div>
 
 
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
